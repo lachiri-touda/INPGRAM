@@ -1,0 +1,623 @@
+swagger: '2.0' 
+info: 
+  version: "1.0"
+  title: INPGRAM 
+  description: Description de l'API INPGRAM 
+  termsOfService: Termes d'utilisation 
+  contact: 
+    name: "Amine Alaoui, Yhaya Bahloul , Mohammed Touda Lachiri"
+
+  license: 
+    name: Nom de la licence 
+basePath: "/" 
+paths: 
+  "/login": 
+    post: 
+      tags: 
+      - Login 
+      summary: "Authentification d'un utilisateur" 
+      description: "Vérifie l'email et le mot de passe"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Email et mot de passe de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              email: 
+                type: string
+              password: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "renvoie le token et value : true"
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+                token : 
+                  type: string
+                id : 
+                  type: string
+         '400':
+          description: "renvoie value : false"
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/register": 
+    post: 
+      tags: 
+      - Register 
+      summary: "Inscrire un utilisateur" 
+      description: "prendre les information fournis par user"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email: 
+                type: string
+              password: 
+                type: string
+              username: 
+                type: string
+              name: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: " renvoie value : true "
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+                
+         '400':
+          description: "renvoie value : false"
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/listUsers": 
+    post: 
+      summary: "Retourne la liste des utilisateurs dans la base de données sauf celui qui demande" 
+      description: "Retourne la liste des utilisateurs dans la base de données sauf celui qui demande" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: " Liste des utilisateurs sauf celui qui fait la demande"
+          schema: 
+            type: object
+            properties:
+                listUsers:
+                  type: array
+                  items:
+                    type: object
+  "/listPosts": 
+    post: 
+      summary: "Retourne la liste des postes uplodés par ceux que l'utilisateur follow" 
+      description: "Retourne la liste des postes uplodés par ceux que l'utilisateur follow" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "Retourne la liste des postes uplodés par ceux que l'utilisateur follow"
+          schema: 
+            type: object
+            properties:
+                listUsers:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      username: 
+                        type: string
+                      posts: 
+                        type: string
+                      picurl: 
+                        type: string
+                      date: 
+                        type: string
+                      likes: 
+                        type: array
+                        items:
+                          type: object
+                      Id: 
+                        type: string
+  "/updatefollowers": 
+    post: 
+      summary: "Mettre à jour les données des followers affichées dans le profile de l'utilisateur" 
+      description: "Mettre à jour les données des followers affichées dans le profile de l'utilisateur" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Login et mot de passe de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              followers: 
+                type: array
+                items:
+                 type: object
+              userid: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "Description de la réponse "
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                results:
+                  type: array
+                  items:
+                    type: object
+  "/updatefollowing": 
+    post: 
+      summary: "Mettre à jour les données des following affichées dans le profile de l'utilisateur"  
+      description: "Mettre à jour les données des following affichées dans le profile de l'utilisateur" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: ""
+          schema:
+            type: object
+            properties:
+              followers: 
+                type: array
+                items:
+                 type: object
+              userid: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "Description de la réponse "
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                results:
+                  type: array
+                  items:
+                    type: object
+  "/follow": 
+    post: 
+      summary: "Mettre à jour la liste des following et followers pour les utilisateurs"
+      description: "Mettre à jour la liste des following et followers pour les utilisateurs"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Prend l'Id de l'utilisateur et le nouveau abonné"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+              followId: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "Description de la réponse "
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/getIsFollowing": 
+    post: 
+      summary: "Verifie si un utilisateur est abonné à un autre ou pas" 
+      description: "Verifie si un utilisateur est abonné à un autre ou pas" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description:  "Prend les Ids des 2 users"
+          schema:
+            type: object
+            properties:
+              userId: 
+                type: string
+              followId: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "Retourne value : true si il est abonné et value : false si non"
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+  "/unfollow": 
+    post: 
+      summary: "Se désabonner du copmte d'un utilisateur" 
+      description: "Se désabonner du copmte d'un utilisateur"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description:  "Prend les Ids des 2 users"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+              followId: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/unlike": 
+    post: 
+      summary: Ne plus aimer un poste
+      description: Ne plus aimer un poste
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id du poste concerné et Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+              userId: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/like": 
+    post:
+      summary: "Mettre un j'aime sur un poste" 
+      description: "Mettre un j'aime sur un poste" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id du poste concerné et Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              Id: 
+                type: string
+              userId: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/getIsLiking": 
+    post: 
+      summary: "Verifie si un poste est aimé par l'utilisateur ou non"
+      description: "Verifie si un poste est aimé par l'utilisateur ou non"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id du poste concerné et Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              userId: 
+                type: string
+              Id: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: "retourne value : true si oui et false si non"
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+  "/DeletePost": 
+    post: 
+
+      summary: "Supprimer un poste de la base de données"
+      description: "Supprimer un poste de la base de données"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id du poste concerné et Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              userid : 
+                type: string
+              postid: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/UpdatePost": 
+    post: 
+ 
+      summary: "Changer la description d'un poste"
+      description: "Changer la description d'un poste"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: ""
+          schema:
+            type: object
+            properties:
+              userid :
+                type: string
+              postid: 
+                type: string
+              description: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/uploadpost": 
+    post: 
+      tags: 
+      - Login 
+      summary: "Uploader une image depuis la gallerie ou bien la caméra"
+      description: "Uploder une image depuis la gallerie ou bien la caméra"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: ""
+          schema:
+            type: object
+            properties:
+              id :
+                type: string
+              urlpost: 
+                type: string
+              description: 
+                type: string
+              date: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+         '400':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                value:
+                  type: boolean
+                message:
+                  type: string
+  "/uploadprofilephoto": 
+    post: 
+      summary: "Uploader une photo de profile depuis la gallerie ou bine la caméra"
+      description: "Uploader une photo de profile depuis la gallerie ou bine la caméra"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: " id du poste et son url"
+          schema:
+            type: object
+            properties:
+              id :
+                type: string
+              url: 
+                type: string
+             
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                message:
+                  type: string
+         '400':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                message:
+                  type: string
+  "/EditProfile": 
+    post: 
+      summary: "Modifier les informations du profile"
+      description: "Modifier les informations du profile"
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "prendre les informations renseignées"
+          schema:
+            type: object
+            properties:
+              userid :
+                type: string
+              name: 
+                type: string
+              username: 
+                type: string
+              bio: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                message:
+                  type: string
+         '400':
+          description: ""
+          schema: 
+            type: object
+            properties:
+                message:
+                  type: string
+  "/getUserDetails": 
+    post: 
+      summary: "Retourner les informations d'un utilisateur" 
+      description: "Retourner les informations d'un utilisateur" 
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          description: "Id de l'utilisateur"
+          schema:
+            type: object
+            properties:
+              userid: 
+                type: string
+      consumes: [] 
+      produces: 
+      - application/json 
+      responses: 
+         '200':
+          description: " retourne un tableau avec les informations"
+          schema: 
+            type: object
+            properties:
+                data:
+                  type: array
+                  items:
+                    type: object
+                    
+  
+  
+  
+         
+  
+
+
+                
+         
+

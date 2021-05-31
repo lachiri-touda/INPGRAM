@@ -1,0 +1,52 @@
+{
+    "name": "Cherprang BNK48",
+    "username": "cherprang_BNK48",
+    "bio": "Singer",
+    "avatar":
+      "https://i.imgur.com/FmeKYGe.jpg",
+    "avatarBackground":
+      "https://i.imgur.com/k2XhDRw.jpg",
+    "posts": [
+      {
+        "id": 1,
+        "words": "cupiditate qui cum",
+        "sentence": "Ipsum laborum quasi debitis dolores veniam.",
+        "sentences":
+          "Impedit veritatis harum nihil dolores dolorem optio assumenda. Laborum saepe voluptas officia odit. Ut voluptas mollitia mollitia eum autem quisquam qui aut. Et ipsa hic harum molestias et quam qui cum. Sint sit soluta.",
+        "paragraph":
+          "Beatae voluptas ea magni quibusdam dolorem sit aut qui. Dolorem rerum et consequuntur inventore officia excepturi dolore architecto fuga. Quia consequatur asperiores rerum qui corporis dolorum. At harum velit adipisci iste odit modi veniam ut. Deserunt quibusdam velit non ea.",
+        "image":
+          "https://i.imgur.com/9JWV4yR.jpg",
+        "imageHeight": 1080,
+        "imageWidth": 1350,
+        "createdDate": "2017-11-21T02:33:53.770Z",
+        "user": {
+          "name": "Ronaldo",
+          "username": "Ronaldo.Effertz",
+          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/samuelkraft/128.jpg",
+          "email": "Ronaldo.Effertz.Deckow@hotmail.com"
+        }
+      },
+      {
+        "id": 2,
+        "words": "est voluptatum aut",
+        "sentence": "Omnis omnis aut dolor quaerat sunt et optio.",
+        "sentences":
+          "Nam numquam magni saepe. Deserunt aspernatur dolorem libero soluta sint molestias et sint sed. Maiores id quis assumenda voluptates quos ut saepe officia voluptatem. Ea placeat sed ut. Modi sed earum voluptas cumque unde eum doloribus ipsam.",
+        "paragraph":
+          "Quam aut reprehenderit asperiores aut. Sunt quis aspernatur incidunt. Illo et perferendis ex incidunt eos ut maxime dolorem voluptatem. Qui rem nihil quos cumque eum doloribus. Quae beatae tempore commodi.",
+        "image":
+          "https://i.pinimg.com/564x/20/60/f7/2060f7703b82b54bc3fee157589044a2.jpg",
+        "imageHeight": 1350,
+        "imageWidth": 1080,
+        "createdDate": "2017-11-20T18:04:58.858Z",
+        "user": {
+          "name": "Markus",
+          "username": "Markus.Price68",
+          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/kikillo/128.jpg",
+          "email": "Markus.Price68.Dicki@yahoo.com"
+        }
+      }
+      
+    ]
+  }

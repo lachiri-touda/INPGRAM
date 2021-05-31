@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { baseURL } from \"./constants\";\nexport { baseURL };","map":{"version":3,"sources":["/home/amine/Bureau/insta_last/InstaClone/src/client/constants/index.js"],"names":["baseURL"],"mappings":"AAAA,SAASA,OAAT;AAEA,SAASA,OAAT","sourcesContent":["import { baseURL } from \"./constants\";\n\nexport { baseURL };\n"]},"metadata":{},"sourceType":"module"}
