@@ -11,10 +11,7 @@ Et vous changez la variable baseURL dans src/client/constants/constants avec "ht
 
 Et si vous voulez tester sur une autre machine on change "localhost" avec notre adresse IPV4 du réseau local.
 
-Technologies utilisées: 
-          - React Native pour le frontend.
-          - MongoDB pour la base de données.
-          - ExpressJS pour le backend.
+Technologies utilisées: React Native pour le frontend, MongoDB pour la base de données, ExpressJS pour le backend.
           
 
 
