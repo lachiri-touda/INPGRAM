@@ -1,14 +1,21 @@
 
 
+
 # INPGRAM
 Développement d'une application  mobile de partage de photos entre utilisateurs.
 
 
-Pour lancer l'application on lance la commande "npm install" dans le dossier src/serveur et src/client
+Pour lancer l'application vous lancez la commande "npm install" dans le dossier src/serveur et src/client.
 
-Et on change la variable baseURL dans src/client/constants/constants avec "http://localhost:3000" si on veut testez en local
+Et vous changez la variable baseURL dans src/client/constants/constants avec "http://localhost:3000" si vous veulez tester en local
 
 Et si vous voulez tester sur une autre machine on change "localhost" avec notre adresse IPV4 du réseau local.
+
+Technologies utilisées: 
+          - React Native pour le frontend.
+          - MongoDB pour la base de données.
+          - ExpressJS pour le backend.
+          
 
 
 
@@ -18,4 +25,5 @@ Et si vous voulez tester sur une autre machine on change "localhost" avec notre 
 <img src="https://user-images.githubusercontent.com/57536169/120239491-ae2f9380-c25e-11eb-8e49-f563cc03d98f.jpg" width="350" height="750">
 <img src="https://user-images.githubusercontent.com/57536169/120239557-d8815100-c25e-11eb-8239-43baa033511c.jpg" width="350" height="750">
 <img src="https://user-images.githubusercontent.com/57536169/120239684-14b4b180-c25f-11eb-80cb-23aa77f14bf9.jpg" width="350" height="750">
+<img src="https://user-images.githubusercontent.com/57536169/120239786-55acc600-c25f-11eb-85b2-b8b763bfbf45.jpg" width="350" height="750">
 
