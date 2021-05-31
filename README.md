@@ -10,3 +10,6 @@ Et on change la variable baseURL dans src/client/constants/constants avec "http:
 Et si vous voulez tester sur une autre machine on change "localhost" avec notre adresse IPV4 du réseau local.
 
 ![IMG_0317](https://user-images.githubusercontent.com/57536169/120201517-d2bb4980-c225-11eb-832d-dcef56e916dd.jpeg =250x250)
+
+
+<img src="https://user-images.githubusercontent.com/57536169/120201517-d2bb4980-c225-11eb-832d-dcef56e916dd.jpeg" width="100" height="100">
