@@ -11,4 +11,4 @@ Et si vous voulez tester sur une autre machine on change "localhost" avec notre 
 
 
 
-<img src="https://user-images.githubusercontent.com/57536169/120201517-d2bb4980-c225-11eb-832d-dcef56e916dd.jpeg" width="350" height="500">
+<img src="https://user-images.githubusercontent.com/57536169/120201517-d2bb4980-c225-11eb-832d-dcef56e916dd.jpeg" width="350" height="600">
