@@ -7,7 +7,7 @@ Développement d'une application  mobile de partage de photos entre utilisateurs
 
 Pour lancer l'application vous lancez la commande "npm install" dans le dossier src/serveur et src/client.
 
-Et vous changez la variable baseURL dans src/client/constants/constants avec "http://localhost:3000" si vous veulez tester en local
+Et vous changez la variable baseURL dans src/client/constants/constants avec "http://localhost:3000" si vous voulez tester en local
 
 Et si vous voulez tester sur une autre machine on change "localhost" avec notre adresse IPV4 du réseau local.
 
