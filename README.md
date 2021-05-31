@@ -1,4 +1,3 @@
-![IMG_0317](https://user-images.githubusercontent.com/57536169/120201223-7c4e0b00-c225-11eb-8703-dd2f8217d379.jpeg)![IMG_0317](https://user-images.githubusercontent.com/57536169/120201247-840daf80-c225-11eb-874d-31ab490659d9.jpeg)
 
 # INPGRAM
 Développement d'une application  mobile de partage de photos entre utilisateurs.
