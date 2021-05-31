@@ -1,4 +1,5 @@
 
+
 # INPGRAM
 Développement d'une application  mobile de partage de photos entre utilisateurs.
 
@@ -12,3 +13,4 @@ Et si vous voulez tester sur une autre machine on change "localhost" avec notre 
 
 
 <img src="https://user-images.githubusercontent.com/57536169/120201517-d2bb4980-c225-11eb-832d-dcef56e916dd.jpeg" width="350" height="650">
+<img src="https://user-images.githubusercontent.com/57536169/120239276-31041e80-c25e-11eb-8169-29405fb53c1a.jpg" width="350" height="650">
